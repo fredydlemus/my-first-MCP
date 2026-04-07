@@ -26,7 +26,7 @@ def update_restock(product_id: str, quantity: int) -> dict:
         "new_stock": products[product_id]["stock"]
     }
 
-@mcp.resource("inventory://products")
+@mcp.tool()
 def list_products() -> str:
     """Return the complete product list."""
     return str(products)
